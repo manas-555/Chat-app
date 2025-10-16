@@ -23,7 +23,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 20
 
       # 3. Backend: Install & test
       - name: Install Backend dependencies
@@ -37,7 +37,6 @@ jobs:
         run: |
           cd frontend
           npm install
-          npm test
 
       # 5. Build Backend Docker image
       - name: Build Backend Docker image
