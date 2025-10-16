@@ -41,12 +41,12 @@ jobs:
       # 5. Build Backend Docker image
       - name: Build Backend Docker image
         run: |
-          docker build -t $DOCKER_HUB_USERNAME/chat-app/backend:latest ./backend
+          docker build -t $DOCKER_HUB_USERNAME/backend:latest ./backend
 
       # 6. Build Frontend Docker image
       - name: Build Frontend Docker image
         run: |
-          docker build -t $DOCKER_HUB_USERNAME/chat-app/frontend:latest ./frontend
+          docker build -t $DOCKER_HUB_USERNAME/frontend:latest ./frontend
 
       # 7. Login to Docker Hub
       - name: Login to Docker Hub
@@ -58,9 +58,9 @@ jobs:
       # 8. Push Backend image
       - name: Push Backend Docker image
         run: |
-          docker push $DOCKER_HUB_USERNAME/chat-app/backend:latest
+          docker push $DOCKER_HUB_USERNAME/backend:latest
 
       # 9. Push Frontend image
       - name: Push Frontend Docker image
         run: |
-          docker push $DOCKER_HUB_USERNAME/chat-app/frontend:latest
+          docker push $DOCKER_HUB_USERNAME/frontend:latest
